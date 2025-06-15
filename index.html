@@ -2,67 +2,115 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Método Alpha – A Mente Milionária 5.0</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #000000, #1a1a1a);
-      color: white;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+      color: #fff;
       text-align: center;
       padding: 20px;
     }
-    .container {
-      max-width: 600px;
-      margin: auto;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    }
+
     h1 {
       font-size: 2em;
-      margin: 20px 0 10px;
+      color: #FFD700;
+      margin-top: 20px;
     }
-    p {
-      font-size: 1.1em;
-      margin-bottom: 25px;
+
+    h2 {
+      color: #00FFB2;
+      font-size: 1.2em;
+      margin-top: 10px;
     }
-    .btn {
-      background: #00ff88;
-      color: #000;
+
+    .cta-button {
+      margin-top: 30px;
       padding: 15px 25px;
-      border: none;
-      border-radius: 10px;
       font-size: 1.1em;
-      text-decoration: none;
-      transition: 0.3s;
+      background-color: #00FF88;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
     }
-    .btn:hover {
-      background: #00cc6a;
+
+    .cta-button:hover {
+      background-color: #00cc70;
     }
+
+    .timer {
+      font-size: 1.5em;
+      color: #FF5555;
+      margin: 20px 0;
+    }
+
+    .viewer-count {
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #ccc;
+    }
+
     audio {
       margin-top: 30px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .bonus {
+      color: #FFD700;
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    img {
+      width: 300px;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00FFB2;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://via.placeholder.com/600x400.png?text=CAPA+DO+MÉTODO+ALPHA" alt="Capa do eBook" />
+  <h1>Desbloqueie Sua Mente Milionária</h1>
+  <h2>Com o Método Alpha – A Mente Milionária 5.0</h2>
 
-    <h1>Método Alpha – A Mente Milionária 5.0</h1>
-    <p>Descubra como transformar seu tempo, dinheiro e conhecimento em uma máquina de liberdade e renda. Aprenda a usar a IA, reprogramação mental e estratégias de alta performance para alcançar seus primeiros R$ 50 mil/mês.</p>
+  <!-- 🔜 Capa premium será adicionada aqui -->
+  <img src="https://via.placeholder.com/300x450.png?text=Capa+Metodo+Alpha" alt="Capa do eBook">
 
-    <a href="https://pay.kiwify.com.br/obe8nyl" class="btn" target="_blank">Quero Mudar de Vida Agora</a>
+  <p>Use a inteligência artificial, neuroprogramação e foco absoluto para atingir <strong>R$ 50 mil/mês</strong> com apenas 2h por dia.</p>
 
-    <br><br>
-    <audio controls>
-      <source src="https://drive.google.com/uc?export=download&id=1-Djki32mP4Yl7pVQJv6v02fmQWGfweae" type="audio/mpeg">
-      Seu navegador não suporta áudio.
-    </audio>
-
-    <p style="margin-top: 20px; font-size: 0.9em;">© 2025 Método Alpha. Todos os direitos reservados.</p>
+  <div class="timer">
+    Oferta expira em: <span id="countdown">00:15:00</span>
   </div>
+
+  <div class="viewer-count">⚡ 13 pessoas visualizaram essa página nos últimos minutos.</div>
+
+  <button class="cta-button" onclick="window.location.href='https://pay.kiwify.com.br/obe8nyl'">Quero desbloquear minha mente milionária</button>
+
+  <div class="bonus">🎁 BÔNUS: Ativação mental secreta liberada no momento da compra.</div>
+
+  <audio controls>
+    <source src="https://drive.google.com/uc?export=download&id=1-Djki32mP4Yl7pVQJv6v02fmQWGfweae" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    // Contador regressivo falso para urgência
+    let time = 15 * 60;
+    const countdownEl = document.getElementById("countdown");
+    setInterval(() => {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      countdownEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      time--;
+      if (time < 0) time = 15 * 60;
+    }, 1000);
+  </script>
 </body>
 </html>
