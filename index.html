@@ -3,77 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Landing Page com Imagem</title>
+  <title>Venda do Ebook IA - Método Alpha</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset básico */
+    * {
       margin: 0;
-      background-color: #f4f4f4;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
       color: #333;
-    }
-    header {
-      background-color: #0078d7;
-      color: white;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
       padding: 20px;
+    }
+    .container {
+      max-width: 480px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .cover img {
+      width: 100%;
+      display: block;
+    }
+    .content {
+      padding: 20px 25px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #222;
       text-align: center;
     }
-    header img {
-      max-width: 100%;
-      height: auto;
+    p.subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    ul {
+      margin-bottom: 25px;
+      list-style: inside disc;
+      color: #444;
+      font-size: 1rem;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .btn-buy {
+      display: block;
+      background: #28a745;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1.2rem;
+      font-weight: 600;
       border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      margin-top: 0;
-    }
-    a.btn {
-      display: inline-block;
-      background-color: #005fa3;
-      color: white;
-      padding: 15px 30px;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 10px rgba(40,167,69,0.4);
+      user-select: none;
     }
-    a.btn:hover {
-      background-color: #004080;
+    .btn-buy:hover {
+      background: #1e7e34;
+      box-shadow: 0 6px 14px rgba(30,126,52,0.6);
     }
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
+    .footer {
+      font-size: 0.85rem;
       color: #777;
-      margin-top: 40px;
+      text-align: center;
+      margin-top: 15px;
+      padding-bottom: 15px;
+    }
+    @media (max-width: 520px) {
+      .container {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <img src="2025061923341168.jpg" alt="Imagem da capa" />
-  <h1>Bem-vindo à Nossa Landing Page</h1>
-  <p>Confira nosso conteúdo exclusivo e aproveite!</p>
-</header>
-
-<main>
-  <h2>Sobre o Projeto</h2>
-  <p>Esta landing page serve para você apresentar seu produto ou serviço de forma simples e direta.</p>
-  <a href="#contato" class="btn">Entre em contato</a>
-</main>
-
-<footer>
-  &copy; 2025 - Todos os direitos reservados.
-</footer>
-
+  <main class="container">
+    <section class="cover">
+      <img src="2025061923341168.jpg" alt="Capa do Ebook IA Método Alpha" />
+    </section>
+    <section class="content">
+      <h1>Aprenda a ganhar dinheiro com Inteligência Artificial!</h1>
+      <p class="subtitle">Descubra técnicas práticas para criar vídeos virais, automações e muito mais usando IA — mesmo sem experiência!</p>
+      <ul>
+        <li>Aprenda passo a passo como usar ferramentas de IA poderosas</li>
+        <li>Domine a criação de vídeos virais que geram tráfego e renda</li>
+        <li>Receba estratégias exclusivas para monetizar seu conhecimento</li>
+        <li>Acesso rápido e seguro ao ebook em PDF</li>
+      </ul>
+      <a
+        class="btn-buy"
+        href="https://payhip.com/b/IxXHc"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Compre Aqui - Ebook Inteligência Artificial</a>
+    </section>
+    <footer class="footer">
+      © 2025 Raphael Zachi — Canal @IAInsana
+    </footer>
+  </main>
 </body>
 </html>
